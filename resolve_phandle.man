@@ -1,0 +1,65 @@
+.TH resolve_phandle 1 "2024-05-09" "1.0" "resolve_phandle"
+
+.SH NAME
+resolve_phandle \- resolves phandles in file-system device trees
+
+.SH SYNOPSIS
+.B resolve_phandle
+\fI[base_directory]\fR
+
+.SH DESCRIPTION
+resolve_phandle parses through a device tree and substitutes properties
+containing phandles with a human-readable version.
+
+Properties are deemed to contain phandles if their name match the following
+list.
+
+.nr savedPD \n[PD]  \" Save original PD value
+.nr PD 0  \" Set paragraph distance to 0
+.IP \[bu] 2
+assigned-clocks
+.IP \[bu] 2
+clocks
+.IP \[bu] 2
+dmas
+.IP \[bu] 2
+gpio-controller
+.IP \[bu] 2
+gpios
+.IP \[bu] 2
+hwlocks
+.IP \[bu] 2
+interrupt-extended
+.IP \[bu] 2
+interrupt-parent
+.IP \[bu] 2
+iommus
+.IP \[bu] 2
+iommus
+.IP \[bu] 2
+memory-region
+.IP \[bu] 2
+msi-parent
+.IP \[bu] 2
+phys
+.IP \[bu] 2
+power-dodmain
+.IP \[bu] 2
+pwms
+.IP \[bu] 2
+regulators
+.IP \[bu] 2
+resets
+.IP \[bu] 2
+vin-supply
+.nr PD \n[savedPD]   \" Restore original spacing
+
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Show help message and exit.
+.SH AUTHOR
+Eric Xu <yundi.eric.xu@gmail.com>
+.SH SEE ALSO
+.BR python (1),
+.BR apt (8)

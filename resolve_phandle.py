@@ -9,7 +9,24 @@ logging.basicConfig(level=logging.INFO)
 SCRIPTHOME = os.path.realpath(__file__)
 # Properties that contain pointers and edited by this script
 PTR_PROPERTIES = {
+    "assigned-clocks",
     "clocks",
+    "dmas",
+    "gpio-controller",
+    "gpios",
+    "hwlocks",
+    "interrupt-extended",
+    "interrupt-parent",
+    "iommus",
+    "iommus",
+    "memory-region",
+    "msi-parent",
+    "phys",
+    "power-dodmain",
+    "pwms",
+    "regulators",
+    "resets",
+    "vin-supply",
 }
 # Pointer properties detected during device tree walk
 PTR_PROPS_IN_TREE = []
